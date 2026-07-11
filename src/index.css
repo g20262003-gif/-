@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;700;900&family=Space+Grotesk:wght@500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer utilities {
+  .rainbow-text {
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: rainbowFlow 4s linear infinite;
+  }
+
+  .bold-rainbow-title {
+    background: linear-gradient(to bottom, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 0px #ffffff);
+  }
+
+  .rainbow-border-pulse {
+    animation: borderRainbow 6s linear infinite;
+  }
+}
+
+@keyframes rainbowFlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes borderRainbow {
+  0%, 100% { border-color: #ff0055; box-shadow: 0 0 15px rgba(255, 0, 85, 0.4); }
+  14% { border-color: #ff7700; box-shadow: 0 0 15px rgba(255, 119, 0, 0.4); }
+  28% { border-color: #ffdd00; box-shadow: 0 0 15px rgba(255, 221, 0, 0.4); }
+  42% { border-color: #00ff66; box-shadow: 0 0 15px rgba(0, 255, 102, 0.4); }
+  56% { border-color: #00f0ff; box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
+  70% { border-color: #0044ff; box-shadow: 0 0 15px rgba(0, 68, 255, 0.4); }
+  84% { border-color: #9900ff; box-shadow: 0 0 15px rgba(153, 0, 255, 0.4); }
+}
+

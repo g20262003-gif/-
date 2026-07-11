@@ -1,0 +1,6 @@
+{
+  "name": "Rainbow Tetris",
+  "description": "A vibrant, mobile-friendly Rainbow-themed Tetris game with smooth touch controls, keyboard support, audio effects, and rich visuals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
